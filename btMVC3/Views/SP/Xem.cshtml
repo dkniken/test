@@ -1,0 +1,32 @@
+﻿@using btMVC3.Models;
+@model List<SanPham>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Xem</title>
+</head>
+<body>
+    <a href="~/SP/Them">Them</a>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <td>Hinh</td> 
+            <td>Xem</td>
+            <td>Xoa</td>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td><img src="~/hinh/@item.Hinh" alt="Alternate Text" /></td>
+                <td><a href="~/SP/Chitiet?ma=@item.Ma">CT</a></td>
+                <td><a href="~/SP/Xoa?ma=@item.Ma">X</a></td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

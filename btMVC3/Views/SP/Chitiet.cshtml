@@ -1,0 +1,22 @@
+﻿@using btMVC3.Models
+@model SanPham
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Chitiet</title>
+</head>
+<body>
+    Hinh anh: <img src="~/hinh/@Model.Hinh" alt="Alternate Text" /> <br />
+    Ten: @Model.Ten; <br />
+    Gia: @Model.Giaban; <br />
+    Chi tiet: @Model.Mota; <br />
+    Giam gia: @Model.Giamgia; <br />
+    <a href="~/SP/Xem">Tro lai</a>
+</body>
+</html>

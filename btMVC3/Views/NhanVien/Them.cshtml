@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Them</title>
+</head>
+<body>
+    <form action="~/NhanVien/Them" method="post">
+        Họ tên: <input type="text" name="Hoten" /><br />
+        Ngày sinh: <input type="date" name="Ngaysinh" /> <br />
+        Quê quán: <input type="text" name="Quequan" /> <br />
+        Lương cơ bản: <input type="text" name="Luongcoban" /> <br />
+        Giới tính: <input type="radio" name="Gioitinh" value="True" />Nam
+        <input type="radio" name="Gioitinh" value="False" />Nữ <br />
+        Điện thoại: <input type="text" name="Dienthoai" />
+        <br />
+        <input type="submit" name="name" value="Lưu" />
+        <br />
+        <a href="~/NhanVien/Xem">Trở lại</a>
+    </form>
+</body>
+</html>

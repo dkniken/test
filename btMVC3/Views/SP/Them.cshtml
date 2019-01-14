@@ -1,0 +1,27 @@
+﻿@using btMVC3.Models;
+@model SanPham
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Them</title>
+</head>
+<body>
+    <form action="~/SP/Them" method="post">
+        Ma san pham: <input type="text" name="Ma"  /> <br />
+        Ten san pham: <input type="text" name="Ten"  /> <br />
+        Gia ban: <input type="text" name="Giaban"  /> <br />
+        Ngay nhap: <input type="date" name="Ngaynhap"/> <br />
+        Giam gia: <input type="text" name="Giamgia" /><br />
+        Mo ta: <input type="text" name="Mota"/><br />
+        hinh: <input type="text" name="Hinh" /><br />
+        <input type="submit" name="name" value="Save" />
+    </form>
+</body>
+</html>

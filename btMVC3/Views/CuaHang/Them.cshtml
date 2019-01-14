@@ -1,0 +1,38 @@
+﻿@using btMVC3.Models;
+@model SanPham
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Them</title>
+    <link href="~/CSS/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form action="~/CuaHang/Them" method="post">
+        Mã sản phẩm: <input type="text" name="Ma"/><br />
+        Tên sản phẩm: <input type="text" name="Ten"/><br />
+        Giá sản phẩm: <input type="text" name="Giaban" /><br />
+        Ngày nhập: <input type="date" name="Ngaynhap"/><br />
+        Giảm giá: <input type="radio" name="Giamgia" value="True"/>Có
+                  <input type="radio" name="Giamgia" value="False"/>Không
+        <br />
+        Mô tả: <input type="text" name="Mota"  /><br />
+        Hình: <select name="Hinh">
+                <option value="1.jpg">Tivi</option>
+                <option value="2.jpg">Tủ lạnh</option>
+                <option value="3.jpg">Máy giặt</option>
+                <option value="4.jpg">Quạt máy</option>
+   
+                </select><br />
+
+        <input type="submit" name="name" value="Lưu" class="btn btn-danger"/>
+
+    </form>
+</body>
+</html>

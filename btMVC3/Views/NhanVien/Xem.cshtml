@@ -1,0 +1,37 @@
+﻿@using btMVC3.Models;
+@model List<NhanVien>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Xem</title>
+</head>
+<body>
+    <a href="~/NhanVien/Them">Thêm</a>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <td>STT</td>
+            <td>Họ và tên nhân viên</td>
+            <td>Chi tiết</td>
+            <td>Sửa</td>
+            <td>Xóa</td>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Ma</td>
+                <td>@item.Hoten</td>
+                <td><a href="~/NhanVien/Chitiet?ma=@item.Ma">Chi tiết</a></td>
+                <td><a href="~/NhanVien/Xoa?ma=@item.Ma">Xóa</a></td>
+                <td><a href="~/NhanVien/Sua?ma=@item.Ma">Sửa</a></td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

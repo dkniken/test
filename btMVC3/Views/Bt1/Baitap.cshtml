@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Baitap</title>
+</head>
+<body>
+   
+    <form method="post">
+        @{
+            string temp = "";
+            if (ViewBag.st != null)
+            { temp = ViewBag.st; }
+        }
+        Tên: <input type="text" name="txtHoten" value="@ViewBag.ten" /> <br />
+        Giới tính: <input type="radio" name="gt" value="Nam" @if (ViewBag.gt == "Nam") { @: checked
+                          } />Nam
+        <input type="radio" name="gt" value="Nữ" @if (ViewBag.gt == "Nữ") { @: checked
+               } />Nữ
+        <br />
+        NTNS: <input type="date" name="NTNS" value="@ViewBag.ntns" /> <br />
+        Sở thích: <input type="checkbox" name="st" value="Ăn" @if (temp.IndexOf("Ăn") >= 0) { @: checked
+                         } />Ăn
+        <input type="checkbox" name="st" value="Ngủ" @if (temp.IndexOf("Ngủ") >= 0) { @: checked
+               } />Ngủ
+        <input type="checkbox" name="st" value="Chơi" @if (temp.IndexOf("Chơi") >= 0) { @: checked
+               } />Chơi
+        <br />
+        Tình trạng: <select name="state">
+            <option value="Độc thân" @if (ViewBag.state == "Độc thân") { @: selected
+                    }>
+                Độc thân
+            </option>
+            <option value="Kết hôn" @if (ViewBag.state == "Kết hôn") { @: selected
+                    }>
+                Kết hôn
+            </option>
+            <option value="Ly thân" @if (ViewBag.state == "Ly thân") { @: selected
+                    }>
+                Ly thân
+            </option>
+        </select>
+        <br />
+        <input type="submit" name="name" value="Xem" />
+    </form>
+    <h2>@ViewBag.kq</h2>
+</body>
+</html>

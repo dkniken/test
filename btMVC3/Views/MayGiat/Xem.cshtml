@@ -1,0 +1,38 @@
+﻿@using btMVC3.Models;
+@model List<MayGiat>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Xem</title>
+    <link href="~/CSS/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="~/MayGiat/Them" class="btn btn-primary">Thêm</a>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <td>Hình:</td>
+            <td>Tên:</td>
+            <td>Giá:</td>
+            <td>Sửa:</td>
+            <td>Xóa:</td>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td><img src="~/hinh/3.jpg" alt="May giat" /></td>
+                <td>@item.Ten</td>
+                <td>@item.GiaBan</td>
+                <td><a href="~/MayGiat/Sua?ma=@item.Ma">Sửa</a></td>
+                <td><a href="~/MayGiat/Xoa?ma=@item.Ma">Xóa</a></td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

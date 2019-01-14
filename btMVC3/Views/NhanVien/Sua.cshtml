@@ -1,0 +1,31 @@
+﻿@using btMVC3.Models;
+@model NhanVien
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sua</title>
+</head>
+<body>
+    <form action="~/NhanVien/Sua" method="post">
+        Mã nhân viên: <input type="text" name="Ma" value="@Model.Ma" /> <br />
+        Họ tên nhân viên: <input type="text" name="Hoten" value="@Model.Hoten" /> <br />
+        Ngày sinh: <input type="date" name="Ngaysinh" value="@Model.Ngaysinh" /> <br />
+        Quê quán: <input type="text" name="Quequan" value="@Model.Quequan" /> <br />
+        Lương cơ bản: <input type="text" name="Luongcoban" value="@Model.Luongcoban" /> <br />
+        Giới tính: <input type="radio" name="Gioitinh" value="@Model.Gioitinh"/> 
+                    <input type="radio" name="Gioitinh" value="@Model.Gioitinh" />
+                    <br />
+        Điện thoại: <input type="text" name="Dienthoai" value="@Model.Dienthoai" /> <br />
+
+                                                                                 <input type="submit" name="name" value="Sửa" />
+                                                                                 <br />
+                                                                                 <a href="~/NhanVien/Xem">Trở về</a>
+    </form>
+</body>
+</html>

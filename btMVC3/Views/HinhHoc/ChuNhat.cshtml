@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ChuNhat</title>
+</head>
+<body>
+    @{ 
+        string temp = "";
+        if(ViewBag.tinh!=null)
+        { temp = ViewBag.tinh; }
+    }
+    <form method="post">
+        Nhập dài: <input type="text" name="dai" value="@ViewBag.dai" /> <br />
+        Nhập rộng: <input type="text" name="rong" value="@ViewBag.rong" /> <br />
+        Tính: <input type="checkbox" name="tinh" value="cv" @if (temp.IndexOf("cv") >= 0)
+        {@:checked
+                     }/> Chu vi
+        <input type="checkbox" name="tinh" value="dt" @if (temp.IndexOf("cv") >= 0)
+        {@:checked
+               }/>Diện tích
+        <br />
+        <input type="submit" name="name" value="Tính" />
+    </form>
+    <h2>Chu vi: @ViewBag.chuvi</h2>
+    <h2>Diện tích: @ViewBag.dientich</h2>
+</body>
+</html>

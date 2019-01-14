@@ -1,0 +1,28 @@
+﻿@using btMVC3.Models;
+@model MayGiat
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sua</title>
+    <link href="~/CSS/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form action="~/MayGiat/Sua" method="post">
+        Mã: <input type="text" name="Ma" value="@Model.Ma" /><br />
+        Tên máy: <input type="text" name="Ten" value="@Model.Ten" /><br />
+        Mô tả: <input type="text" name="MoTa" value="@Model.MoTa" /> <br />
+        Giá bán: <input type="text" name="GiaBan" value="@Model.GiaBan" /><br />
+        Ngày bán: <input type="text" name="NgayBan" value="@Model.NgayBan" /> <br />
+        Nhà sản xuất: <input type="text" name="NhaSanXuat" value="@Model.NhaSanXuat" /><br />
+          <input type="submit" name="name" value="Lưu"  class="btn btn-secondary"/> 
+        <a href="~/MayGiat/Xem" class="btn btn-danger">Hủy</a>
+    </form>
+</body>
+</html>
